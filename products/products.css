@@ -1,0 +1,14 @@
+.record-item {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+    text-align: center;
+}
+
+
+/* ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} */
