@@ -23,7 +23,7 @@ export function renderProduct(record){
 
     const albumTitle = document.createElement('h4');
     albumTitle.classList.add('album-title');
-    albumTitle.textContent = `Album title:${record.album}`;
+    albumTitle.textContent = `Album title: ${record.album}`;
     listItem.append(albumTitle);
 
     const albumCondition = document.createElement('p');
@@ -38,7 +38,7 @@ export function renderProduct(record){
 
     const purchaseButton = document.createElement('button');
     purchaseButton.classList.add('button');
-    purchaseButton.textContent = 'Purchase';
+    purchaseButton.textContent = 'Add to cart';
     purchaseButton.id = record.id;
     listItem.append(purchaseButton);
 

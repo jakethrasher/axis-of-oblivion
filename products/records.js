@@ -2,7 +2,7 @@ export const records = [
     {
         id: '4hero',
         artist: '4hero',
-        album: 'parallel universe',
+        album: 'Parallel Universe',
         image: '4hero.png',
         condition:'Near Mint',
         genre: '90\'s electronic',
