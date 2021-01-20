@@ -2,12 +2,12 @@
     font-family: Aero;
     src: url('../assets/Aero.ttf')
 }
-a{  font-size: 1.6rem;
+a{  font-size: 1.3rem;
     font-family: Aero;
     color:rgb(199, 238, 84);
     text-decoration: none;
     border: 2px solid black;
-    padding: 4px;
+    padding: 6px;
     border-radius: 10px;
     background-color: black;
 }
