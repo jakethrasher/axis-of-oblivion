@@ -12,17 +12,20 @@ export function renderProduct(record){
     const listItem = document.createElement('li');
     listItem.classList.add('record-item');
     
+    const albumCover = document.createElement('img');
+    albumCover.src = `../assets/${record.image}`;
+    listItem.append(albumCover);
+    
     const artistName = document.createElement('h3');
+    artistName.classList.add('artist-title')
     artistName.textContent = `Artist: ${record.artist}`;
     listItem.append(artistName);
 
     const albumTitle = document.createElement('h4');
-    albumTitle.textContent = `Album title: ${record.album}`;
+    albumTitle.classList.add('album-title');
+    albumTitle.textContent = `Album title:${record.album}`;
     listItem.append(albumTitle);
-
-    const albumCover = document.createElement('img');
-    albumCover.src = `../assets/${record.image}`;
-    listItem.append(albumCover);
+    console.log(albumTitle.childNodes.nodeValue)
 
     const albumCondition = document.createElement('p');
     albumCondition.classList.add('condition');
