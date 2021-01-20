@@ -2,9 +2,14 @@
     font-family: Aero;
     src: url('../assets/Aero.ttf')
 }
-a{  font-size: 1.4rem;
+a{  font-size: 1.6rem;
     font-family: Aero;
-    color:blue;
+    color:rgb(199, 238, 84);
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 4px;
+    border-radius: 10px;
+    background-color: black;
 }
 .main{
     background-image: url('../assets/home-page-image.png');
