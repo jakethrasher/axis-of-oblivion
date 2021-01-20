@@ -69,6 +69,16 @@ export const records = [
         price: 35
 
     },
+    {
+        id: 'adonis',
+        artist: 'Adonis',
+        album: 'No Way Back - Single',
+        image: 'adonis.png',
+        condition:'Mint',
+        genre: '90\'s electronic',
+        price: 12
+
+    },
   
   
  
