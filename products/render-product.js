@@ -17,7 +17,7 @@ export function renderProduct(record){
     listItem.append(albumCover);
     
     const artistName = document.createElement('h3');
-    artistName.classList.add('artist-title')
+    artistName.classList.add('artist-title');
     artistName.textContent = `Artist: ${record.artist}`;
     listItem.append(artistName);
 
