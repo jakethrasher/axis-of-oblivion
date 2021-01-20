@@ -1,1 +1,25 @@
-/* add home page styles here */
+@font-face{
+    font-family: Aero;
+    src: url('/assets/Aero.ttf')
+}
+a{  font-size: 1.4rem;
+    font-family: Aero;
+    color:blue;
+}
+.main{
+    background-image: url('/assets/home-page-image.png');
+    height: 600px;
+    width: 600px;
+
+}
+.title{
+    font-size: 3.5rem;
+    font-family: Aero;
+    writing-mode:vertical-lr ;
+    transform: rotate(180deg);
+}
+.sidebar{
+    position:fixed;
+    right: 10px;
+    top: 25%;
+}
