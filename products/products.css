@@ -1,13 +1,12 @@
 .record-item {
-    width: 220px;
-    height: 330px;
-    height: 200px;
+    width: 200px;
+    height: 295px;
     display: flex;
     flex-direction: column;
     word-wrap: wrap;
 }
 img{
-    width:220px;    
+    width:180px;    
 }
 .artist-title{
     font-weight: bold;
