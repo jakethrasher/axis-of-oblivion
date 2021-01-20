@@ -1,6 +1,6 @@
 export const records = [
     {
-        id: '4hero',
+        id: 1,
         artist: '4hero',
         album: 'Parallel Universe',
         image: '4hero.png',
@@ -10,7 +10,7 @@ export const records = [
 
     },
     {
-        id: 'goldi',
+        id: 2,
         artist: 'Goldi',
         album: 'Timeless',
         image: 'goldi.png',
@@ -20,7 +20,7 @@ export const records = [
 
     },
     {
-        id: 'hardrive',
+        id: 3,
         artist: 'Hardrive',
         album: 'Deep Inside -Ep',
         image: 'hardrive.png',
@@ -30,7 +30,7 @@ export const records = [
 
     },
     {
-        id: 'crystal-waters',
+        id: 4,
         artist: 'Crystal Waters',
         album: 'Gypsy Woman(She\'s Homeless)',
         image: 'crystalwaters.png',
@@ -40,7 +40,7 @@ export const records = [
 
     },
     {
-        id: 'meat-beat-manifesto',
+        id: 5,
         artist: 'Meat Beat Manifesto',
         album: '99%',
         image: 'meatbeatmanifesto.png',
@@ -50,7 +50,7 @@ export const records = [
 
     },
     {
-        id: 'st-germain',
+        id: 6,
         artist: 'St Germain',
         album: 'Boulevard',
         image: 'stgermain.png',
@@ -60,7 +60,7 @@ export const records = [
 
     },
     {
-        id: 'aphex-twin',
+        id: 7,
         artist: 'Aphex Twin',
         album: 'Come To Daddy',
         image: 'aphextwin.png',
@@ -70,7 +70,7 @@ export const records = [
 
     },
     {
-        id: 'adonis',
+        id: 8,
         artist: 'Adonis',
         album: 'No Way Back - Single',
         image: 'adonis.png',
