@@ -25,7 +25,6 @@ export function renderProduct(record){
     albumTitle.classList.add('album-title');
     albumTitle.textContent = `Album title:${record.album}`;
     listItem.append(albumTitle);
-    console.log(albumTitle.childNodes.nodeValue)
 
     const albumCondition = document.createElement('p');
     albumCondition.classList.add('condition');

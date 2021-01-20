@@ -16,7 +16,7 @@ test('when given an object returns li', (expect) => {
 
     };
     // Set up your arguments and expectations
-    const expected = `<li class="record-item"><h3>Artist: 4hero</h3><h4>Album title: Parallel Universe</h4><img src="../assets/4hero.png"><p class="condition">Condition: Excellent</p><p class="price">$20.00</p><button class="button" id="4hero">Purchase</button></li>`;
+    const expected = `<li class="record-item"><img src="../assets/4hero.png"><h3 class="artist-title">Artist: 4hero</h3><h4 class="album-title">Album title:Parallel Universe</h4><p class="condition">Condition: Excellent</p><p class="price">$20.00</p><button class="button" id="4hero">Purchase</button></li>`;
     
     //Act 
     // Call the function you're testing and set the result to a const
