@@ -1,4 +1,4 @@
-import { findById, calcItemTotal } from '../utils.js';
+import { findById } from '../utils.js';
 import { renderLineItems } from './render-line-items.js';
 import { records } from '../records.js';
 import { cart } from './cart-data.js';
