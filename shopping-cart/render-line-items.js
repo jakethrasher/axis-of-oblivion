@@ -1,6 +1,6 @@
-import { calcItemTotal } from '../utils.js'
+import { calcItemTotal } from '../utils.js';
 
-export function renderLineItems(cartItem, record){
+export function renderLineItems(cartItem, record) {
     const tableRow = document.createElement('tr');
 
     const tdRecord = document.createElement('td');
@@ -9,7 +9,7 @@ export function renderLineItems(cartItem, record){
 
     const quantity = cartItem.quantity;
     const tdQuantity = document.createElement('td');
-    tdQuantity.textContent = quantity; 
+    tdQuantity.textContent = quantity;
     tableRow.append(tdQuantity);
 
 
@@ -17,6 +17,6 @@ export function renderLineItems(cartItem, record){
     tdPrice.textContent = calcItemTotal(cartItem.quantity, record.price);
     tableRow.append(tdPrice);
 
-    
+
     return tableRow;
 }
