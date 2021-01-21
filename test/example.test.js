@@ -1,7 +1,55 @@
 // IMPORT MODULES under test here:
 import { renderProduct } from '../products/render-product.js';
+import { findById } from '../utils.js';
+import { records } from '../records.js';
+import { renderLineItems } from '../shopping-cart/render-line-items.js';
 
 const test = QUnit.test;
+test('it should create a table row', (expect) => {
+    //Arrange
+
+
+    // Set up your arguments and expectations
+    const expected = <tr>
+    <td>Goldi Timeless</td>
+    <td>2</td>
+    <td>50</td>
+  </tr>
+    
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = renderLineItems() ;
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+test('it should take in 5 and return item', (expect) => {
+    //Arrange
+
+
+    // Set up your arguments and expectations
+    const expected = {
+        id: 5,
+        artist: 'Meat Beat Manifesto',
+        album: '99%',
+        image: 'meatbeatmanifesto.png',
+        condition:'Near Mint',
+        genre: '90\'s electronic',
+        price: 35
+
+    };
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = findById(5, records);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, expected);
+});
 
 test('when given an object returns li', (expect) => {
     //Arrange

@@ -79,10 +79,4 @@ export const records = [
         price: 12
 
     },
-  
-  
- 
-   
- 
-
 ];
