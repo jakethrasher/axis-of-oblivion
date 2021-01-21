@@ -10,5 +10,5 @@ export function findById(id, array) {
 }
 
 export function calcItemTotal(quantity, price){
-    return Math.round(quantity * price) / 100;
+    return quantity * price;
 }

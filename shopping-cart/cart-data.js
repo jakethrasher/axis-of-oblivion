@@ -4,8 +4,8 @@ export const cart = [
         quantity: 2
     },
     {
-        id: 3,
-        quantity: 4
+        id: 2,
+        quantity: 2
     },
     {
         id: 5,

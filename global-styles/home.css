@@ -28,3 +28,10 @@ a{  font-size: 1.3rem;
     right: 10px;
     top: 25%;
 }
+table {
+    width: 100%;
+    text-align: center;
+}
+th {
+    font-weight: bold;
+}
