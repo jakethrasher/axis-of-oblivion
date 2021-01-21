@@ -21,13 +21,14 @@ orderTotalTd.style.fontSize = '1.2rem';
 orderTotalTd.style.fontWeight = 'bold';
 orderTotalTd.textContent = `Order total:`;
 
-const blankTd = document.createElement('td');
+const blankTd1 = document.createElement('td');
+const blankTd2 = document.createElement('td');
 
 const totalPriceTd = document.createElement('td');
 totalPriceTd.style.fontSize = '1.2rem';
 totalPriceTd.style.fontWeight = 'bold';
 totalPriceTd.textContent = `$${totalPrice}`;
 
-totalRow.append(orderTotalTd, blankTd, totalPriceTd);
+totalRow.append(orderTotalTd, blankTd1, blankTd2, totalPriceTd);
 
 cartTable.append(totalRow);
