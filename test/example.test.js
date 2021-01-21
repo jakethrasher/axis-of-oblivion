@@ -25,7 +25,7 @@ test('it should create a table row when given a record object', (expect) => {
         quantity: 2
     };
     // Set up your arguments and expectations
-    const expected = '<tr><td>Goldi Timeless</td><td>2</td><td>50</td></tr>';
+    const expected = '<tr><td>Goldi "Timeless"</td><td>2</td><td>$50</td></tr>';
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = renderLineItems(cart, findById(2, records));

@@ -1,0 +1,39 @@
+@font-face{
+    font-family: Aero;
+    src: url('../assets/Aero.ttf')
+}
+*{
+    box-sizing: border-box;
+}
+main{
+    width: 80%;
+    margin: auto
+}
+table {
+    margin: 30px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 12px;
+}
+th {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    font-size: 1.3rem;
+    font-family: Aero;
+    color:rgb(199, 238, 84);
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: black;
+}
+  

@@ -2,7 +2,7 @@
     font-family: Aero;
     src: url('../assets/Aero.ttf')
 }
-a{  font-size: 1.3rem;
+.enter-site-button{  font-size: 1.3rem;
     font-family: Aero;
     color:rgb(199, 238, 84);
     text-decoration: none;
@@ -28,10 +28,8 @@ a{  font-size: 1.3rem;
     right: 10px;
     top: 25%;
 }
-table {
-    width: 100%;
-    text-align: center;
-}
-th {
-    font-weight: bold;
+.information{
+    font-size: 1.5rem;
+    width: 60%;
+    font-family: monospace;
 }
