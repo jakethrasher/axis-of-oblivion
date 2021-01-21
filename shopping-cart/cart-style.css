@@ -36,4 +36,15 @@ button{
     border-radius: 10px;
     background-color: black;
 }
+.back{
+    margin: 8px;
+    font-size: 1.3rem;
+    font-family: Aero;
+    color:rgb(199, 238, 84);
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: black;
+}
   
