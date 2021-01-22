@@ -30,6 +30,7 @@ export function clearCart() {
 
 export function addToCart(id) {
     const cart = getCart();
+
     const cartItem = findById(id, cart);
     //is newItem already in the cart? if so..
     if (cartItem) {
@@ -40,7 +41,7 @@ export function addToCart(id) {
             id: id,
             quantity: 1
         };
-        cart.push[newItem];
+        cart.push(newItem);
     }
     setCart(cart);
 }
