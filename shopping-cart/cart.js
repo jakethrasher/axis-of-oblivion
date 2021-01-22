@@ -1,14 +1,14 @@
 import { findById } from '../utils.js';
 import { renderLineItems } from './render-line-items.js';
 import { records } from '../records.js';
-// import { cart } from './cart-data.js';
 import { calcOrderTotal } from '../utils.js';
-import { getCart } from '../cart-utils.js';
+import { clearCart, getCart } from '../cart-utils.js';
 
 
 const cartTable = document.querySelector('table');
 
 const cart = getCart();
+if (!cart[0]) orderButton.disabled = true;
 
 for (let cartItem of cart){
     const record = findById(cartItem.id, records);
@@ -36,3 +36,10 @@ totalPriceTd.textContent = `$${totalPrice}`;
 totalRow.append(orderTotalTd, blankTd1, blankTd2, totalPriceTd);
 
 cartTable.append(totalRow);
+
+const orderButton = document.querySelector('button');
+orderButton.addEventListener('click', ()=>{
+    alert(JSON.stringify(cart, true, 2));
+    clearCart();
+    location.reload();
+});
