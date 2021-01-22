@@ -7,6 +7,8 @@
 //     genre: '90\'s electronic',
 //     price: 20
 
+import { addToCart } from '../cart-utils.js';
+
 // },
 export function renderProduct(record){
     const listItem = document.createElement('li');
@@ -42,7 +44,10 @@ export function renderProduct(record){
     purchaseButton.id = record.id;
     listItem.append(purchaseButton);
 
+    purchaseButton.addEventListener('click', () =>{
+        addToCart(record.id);
+        console.log(record.id);
+    });
+
     return listItem;
 }
-
-

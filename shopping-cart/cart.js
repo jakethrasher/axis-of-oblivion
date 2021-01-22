@@ -1,10 +1,14 @@
 import { findById } from '../utils.js';
 import { renderLineItems } from './render-line-items.js';
 import { records } from '../records.js';
-import { cart } from './cart-data.js';
+// import { cart } from './cart-data.js';
 import { calcOrderTotal } from '../utils.js';
+import { getCart } from '../cart-utils.js';
+
 
 const cartTable = document.querySelector('table');
+
+const cart = getCart();
 
 for (let cartItem of cart){
     const record = findById(cartItem.id, records);
