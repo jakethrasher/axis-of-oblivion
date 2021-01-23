@@ -1,0 +1,13 @@
+body{
+    background-color: lightgrey;
+}
+.form{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}   
+label{
+    display: flex;
+    flex-direction: column;
+}
