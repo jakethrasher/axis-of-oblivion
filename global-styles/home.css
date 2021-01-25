@@ -11,11 +11,15 @@
     border-radius: 10px;
     background-color: black;
 }
-.main{
+/* .main{
     background-image: url('../assets/home-page-image.png');
     height: 800px;
-    width: 600px;
+    width: 100%;
 
+} */
+img{
+    height: auto;
+    width: 80%;
 }
 .title{
     font-size: 3.5rem;
