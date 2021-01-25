@@ -36,7 +36,7 @@ export function renderProduct(record){
 
     purchaseButton.addEventListener('click', () =>{
         addToCart(record.id);
-        console.log(record.id);
+       
     });
 
     return listItem;

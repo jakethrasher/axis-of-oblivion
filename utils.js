@@ -32,14 +32,14 @@ export function setProduct(productsArray) {
     localStorage.setItem(PRODUCT, stringyProducts);
 }
 
-export function getProducts() {
+export function seedAndGetProducts() {
     const stringyProducts = localStorage.getItem(PRODUCT);
-    //if there is a cart in local storage, grab it
+  
     if (stringyProducts) {
 
-        const parsedCart = JSON.parse(stringyProducts);
+        const parsedProduct = JSON.parse(stringyProducts);
 
-        return parsedCart;
+        return parsedProduct;
     } else {
         const stringyDefaultCart = JSON.stringify(records);
         localStorage.setItem(PRODUCT, stringyDefaultCart);

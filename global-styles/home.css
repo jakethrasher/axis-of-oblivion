@@ -13,7 +13,7 @@
 }
 .main{
     background-image: url('../assets/home-page-image.png');
-    height: 600px;
+    height: 800px;
     width: 600px;
 
 }
@@ -32,4 +32,5 @@
     font-size: 1.5rem;
     width: 60%;
     font-family: monospace;
+    line-height: 2rem;
 }

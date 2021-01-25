@@ -1,4 +1,4 @@
-import { getProducts, setProduct } from '../utils.js';
+import { seedAndGetProducts, setProduct } from '../utils.js';
 
 const form = document.querySelector('form');
 
@@ -18,10 +18,10 @@ form.addEventListener('submit', (event) => {
         album: albumData,
         image: imageFileName,
         condition: conditionData,
-        price:Number(priceData)
+        price: Number(priceData)
     };
 
-    const parsedProducts = getProducts();
+    const parsedProducts = seedAndGetProducts();
     //pushing form data into the array
     parsedProducts.push(newRecordObject);
     //stringify and set to local storage using setProduct

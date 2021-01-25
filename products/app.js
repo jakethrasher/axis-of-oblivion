@@ -1,10 +1,10 @@
 import { renderProduct } from './render-product.js';
 // import { records } from '../records.js';
-import { getProducts } from '../utils.js';
+import { seedAndGetProducts } from '../utils.js';
 
-getProducts();
+seedAndGetProducts();
 
-const productsInStorage = getProducts();
+const productsInStorage = seedAndGetProducts();
 
 const list = document.getElementById('list');
 

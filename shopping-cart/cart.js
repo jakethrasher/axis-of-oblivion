@@ -4,13 +4,11 @@ import { records } from '../records.js';
 import { calcOrderTotal } from '../utils.js';
 import { clearCart, getCart } from '../cart-utils.js';
 
-
 const cartTable = document.querySelector('table');
 
 const cart = getCart();
-if (!cart[0]) orderButton.disabled = true;
 
-for (let cartItem of cart){
+for (let cartItem of cart) {
     const record = findById(cartItem.id, records);
     const tableRow = renderLineItems(cartItem, record);
     cartTable.append(tableRow);
@@ -38,8 +36,9 @@ totalRow.append(orderTotalTd, blankTd1, blankTd2, totalPriceTd);
 cartTable.append(totalRow);
 
 const orderButton = document.querySelector('button');
-orderButton.addEventListener('click', ()=>{
+orderButton.addEventListener('click', () => {
     alert(JSON.stringify(cart, true, 2));
     clearCart();
     location.reload();
 });
+if (!cart[0]) orderButton.style.display = 'none';
