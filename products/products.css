@@ -2,17 +2,41 @@
     font-family: Aero;
     src: url('../assets/Aero.ttf')
 }
-
-.cart-img{
-    height: 30px;
-    width: 30px;
-    text-align: right;
-    margin-left: 100px;
+.product-header{
+    display: flex;
+    justify-content:space-evenly;
+    letter-spacing: 10px;
+    font-size: 3.5rem;
+    border-bottom: 3px solid black;
+    height: 120px;
 }
-
+.back{
+    margin: 8px;
+    font-size: 1.3rem;
+    width: min-content;
+    font-family: Aero;
+    color:rgb(199, 238, 84);
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: black;
+}
+.cart-img{
+    height: 40px;
+    width: 40px;
+    text-align: right;
+    /* margin-left: 100px; */
+}
+.main-section{
+    width: 70%;
+}
 .record-item {
-    width: 200px;
-    height: 295px;
+    margin: 10px;
+    width: min-content;
+    height: 315px;
+    padding: 3px;
+    font-size: 1em;
     display: flex;
     flex-direction: column;
     word-wrap: wrap;
