@@ -1,8 +1,62 @@
 // IMPORT MODULES under test here:
 import { renderProduct } from '../products/render-product.js';
+import { calcItemTotal, findById } from '../utils.js';
+import { records } from '../records.js';
+import { renderLineItems } from '../shopping-cart/render-line-items.js';
+import { clearCart, getCart, setCart } from '../cart-utils.js';
 
 const test = QUnit.test;
+test('it should return quantity * price', (expect) => {
+    //Arrange
 
+    // Set up your arguments and expectations
+    const expected = 80;
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = calcItemTotal(2, 40);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+test('it should create a table row when given a record object', (expect) => {
+    //Arrange
+    const cart = {
+        id: 2,
+        quantity: 2
+    };
+    // Set up your arguments and expectations
+    const expected = '<tr><td>Goldi</td><td>Timeless</td><td>2</td><td>$50</td></tr>';
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = renderLineItems(cart, findById(2, records));
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual.outerHTML, expected);
+});
+test('it should take in 5 and return item', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = {
+        id: 5,
+        artist: 'Meat Beat Manifesto',
+        album: '99%',
+        image: 'meatbeatmanifesto.png',
+        condition: 'Near Mint',
+        genre: '90\'s electronic',
+        price: 35
+
+    };
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = findById(5, records);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, expected);
+});
 test('when given an object returns li', (expect) => {
     //Arrange
     const fourHero = {
@@ -10,14 +64,14 @@ test('when given an object returns li', (expect) => {
         artist: '4hero',
         album: 'Parallel Universe',
         image: '4hero.png',
-        condition:'Excellent',
+        condition: 'Excellent',
         genre: '90\'s electronic',
         price: 20
 
     };
     // Set up your arguments and expectations
     const expected = `<li class="record-item"><img src="../assets/4hero.png"><h3 class="artist-title">Artist: 4hero</h3><h4 class="album-title">Album title: Parallel Universe</h4><p class="condition">Condition: Excellent</p><p class="price">$20.00</p><button class="button" id="1">Add to cart</button></li>`;
-    
+
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = renderProduct(fourHero);
@@ -25,4 +79,55 @@ test('when given an object returns li', (expect) => {
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual.outerHTML, expected);
+});
+
+test('getCart should get the cart from local storage', (expect)=>{
+    const testCart = [
+        {
+            id: 1,
+            quantity:1
+        },
+        {
+            id:2,
+            quantity:2
+        }
+    ];
+    const stringTestCart = JSON.stringify(testCart);
+    localStorage.setItem('CART', stringTestCart);
+    
+    const cart = getCart();
+    
+    expect.deepEqual(testCart, cart);
+});
+
+test('setCart should send testCart to local storage', (expect)=>{
+    const testCart = [
+        {
+            id: 1,
+            quantity:1
+        },
+        {
+            id:2,
+            quantity:2
+        }
+    ];
+    setCart(testCart);
+
+    const cart = localStorage.getItem('CART');
+
+    const parsedCart = JSON.parse(cart);
+ 
+    expect.deepEqual(testCart, parsedCart);
+});
+test('clearCart should clear the array in local storage', (expect)=>{
+    
+    localStorage.setItem('CART', 'tacos');
+
+    clearCart(); 
+    
+    const testCart = getCart();
+    const newCart = JSON.parse(localStorage.getItem('CART'));
+
+
+    expect.deepEqual(newCart, testCart);
 });

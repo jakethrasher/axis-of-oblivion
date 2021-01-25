@@ -1,13 +1,5 @@
-// {
-//     id: '4hero',
-//     artist: '4hero',
-//     album: 'parallel universe',
-//     image: '4hero.png',
-//     condition:'Excellent',
-//     genre: '90\'s electronic',
-//     price: 20
+import { addToCart } from '../cart-utils.js';
 
-// },
 export function renderProduct(record){
     const listItem = document.createElement('li');
     listItem.classList.add('record-item');
@@ -42,7 +34,10 @@ export function renderProduct(record){
     purchaseButton.id = record.id;
     listItem.append(purchaseButton);
 
+    purchaseButton.addEventListener('click', () =>{
+        addToCart(record.id);
+       
+    });
+
     return listItem;
 }
-
-

@@ -2,7 +2,7 @@
     font-family: Aero;
     src: url('../assets/Aero.ttf')
 }
-a{  font-size: 1.3rem;
+.enter-site-button{  font-size: 1.3rem;
     font-family: Aero;
     color:rgb(199, 238, 84);
     text-decoration: none;
@@ -11,11 +11,15 @@ a{  font-size: 1.3rem;
     border-radius: 10px;
     background-color: black;
 }
-.main{
+/* .main{
     background-image: url('../assets/home-page-image.png');
-    height: 600px;
-    width: 600px;
+    height: 800px;
+    width: 100%;
 
+} */
+img{
+    height: auto;
+    width: 80%;
 }
 .title{
     font-size: 3.5rem;
@@ -26,5 +30,11 @@ a{  font-size: 1.3rem;
 .sidebar{
     position:fixed;
     right: 10px;
-    top: 25%;
+    top: 22%;
+}
+.information{
+    font-size: 1.5rem;
+    width: 60%;
+    font-family: monospace;
+    line-height: 2rem;
 }

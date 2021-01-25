@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../global-styles/reset.css">
     <link rel="stylesheet" href="../global-styles/style.css">
     <link rel="stylesheet" href="../global-styles/home.css">
+    <link rel="stylesheet" href="./cart-style.css">
     <title>My Cart</title>
 </head>
 <body>
     <header><h1 id="title">my cart</h1></header>
     <main>
-        <table style="width:100%">
-            <tr>
-              <th>Item</th>
-              <th>Quantity</th>
-              <th>Price</th>
-            </tr>
-           
-          </table>
+      <table class="table">
+        <tr>
+          <th>Artist</th>
+          <th>Album</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </table>
     </main>
-    <button>Place Order</button>
-
-    
-</body>
-</html>
+    <div class="button-container">
+      <button>place order</button>
+    </div>
+    <div class="button-container">
+      <a class="back" href="../products/">&#60;&#60;</a>
+    </div>
+        
+        <script type="module" src="./cart.js"></script>  
+    </body>
+    </html>
+       
